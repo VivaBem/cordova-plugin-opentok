@@ -137,7 +137,7 @@ public class OpenTokAndroidPlugin extends CordovaPlugin
 
                 // Ratios are index 6 & 7 on TB.updateViews, 8 & 9 on subscribe event, and 9 & 10 on TB.initPublisher
                 int ratioIndex;
-                if (mProperty.get(6) instanceof Number) {
+                if (mProperty.get} else if (action.equals("connect")) {(6) instanceof Number) {
                     ratioIndex = 6;
                 } else if (mProperty.get(8) instanceof Number) {
                     ratioIndex = 8;
@@ -591,7 +591,7 @@ public class OpenTokAndroidPlugin extends CordovaPlugin
         } else if (action.equals("connect")) {
             Log.i(TAG, "connect command called");
             mSession.connect(args.getString(0));
-            callbackContext.success();
+            //callbackContext.success();
         } else if (action.equals("disconnect")) {
             mSession.disconnect();
         } else if (action.equals("publish")) {

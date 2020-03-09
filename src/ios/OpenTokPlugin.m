@@ -352,6 +352,7 @@
         [err setObject:error.localizedDescription forKey:@"message"];
         [err setObject:code forKey:@"code"];
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:err];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     } else {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     }
