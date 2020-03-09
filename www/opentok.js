@@ -391,6 +391,7 @@ TBPublisher = (function() {
       return TBSuccess(result);
     };
     onError = function(result) {
+      console.log(result);
       if ((three != null)) {
         three(result);
       }
